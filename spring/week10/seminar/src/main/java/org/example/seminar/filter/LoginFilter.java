@@ -25,7 +25,7 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
         String password = obtainPassword(request);
 
         // username과 password를 검증하기 위해 토큰에 담기
-        UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken();
+        UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(username, password, null);
 
         // token을 AuthenticationManager로 전달하며 인증 역할 위임
         return authenticationManager.authenticate(authToken);
