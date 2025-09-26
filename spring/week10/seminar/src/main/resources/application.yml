@@ -3,7 +3,7 @@ spring:
     driver-class-name: org.h2.Driver  # H2 데이터베이스를 사용하기 위한 JDBC 드라이버 클래스 이름
     username: sa                     # 데이터베이스 접속 사용자 이름 (기본값: 'sa')
     password:                        # 데이터베이스 접속 비밀번호 (H2의 기본값은 빈값)
-    url: jdbc:h2:mem:seminarDB           # 데이터베이스 URL (H2 메모리 모드로 'test' 이름의 DB 생성)
+    url: jdbc:h2:mem:test           # 데이터베이스 URL (H2 메모리 모드로 'test' 이름의 DB 생성)
   h2:
     console:
       enabled: true                  # H2 웹 콘솔 활성화 (true로 설정 시, 웹 UI를 통해 DB 확인 가능)
