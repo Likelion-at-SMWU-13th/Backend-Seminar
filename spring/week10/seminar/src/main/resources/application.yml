@@ -1,6 +1,6 @@
 spring:
   jwt:
-    secret = likelion20250930sldkfjeifalskdfjei
+    secret: likelion20250930sldkfjeifalskdfjei
 
   datasource:
     driver-class-name: org.h2.Driver  # H2 데이터베이스를 사용하기 위한 JDBC 드라이버 클래스 이름
