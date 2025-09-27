@@ -1,6 +1,6 @@
 package org.example.seminar.service;
 
-import org.example.seminar.UserRepository;
+import org.example.seminar.repository.UserRepository;
 import org.example.seminar.dto.CustomUserDetails;
 import org.example.seminar.entity.User;
 import org.springframework.security.core.userdetails.UserDetails;
