@@ -1,5 +1,6 @@
 package org.example.seminar.config;
 
+import org.example.seminar.filter.JWTFilter;
 import org.example.seminar.filter.LoginFilter;
 import org.example.seminar.util.JWTUtil;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
@@ -61,6 +62,9 @@ public class SecurityConfig {
                 .authorizeHttpRequests((auth) -> auth
                         .requestMatchers("/", "/login", "/join").permitAll()
                         .anyRequest().authenticated());
+
+        http
+                .addFilterBefore(new JWTFilter(jwtUtil), LoginFilter.class);
 
         http
                 .addFilterAt(new LoginFilter(authenticationManager(authenticationConfiguration), jwtUtil), UsernamePasswordAuthenticationFilter.class);
